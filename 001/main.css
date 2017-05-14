@@ -82,11 +82,11 @@ input[type="text"]
 }
 
 #heydude{
-  max-width: 23%;
+  max-width: 28%;
   position: fixed;
   bottom: 0px;
   cursor: pointer;
   left: 0px;
   display: none;
-
+  opacity: 0.3;
 }
