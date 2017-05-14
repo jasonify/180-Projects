@@ -42,8 +42,9 @@ class ViewController: UIViewController {
     
     
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+       print("Shaking")
         if motion == .motionShake {
-            wordLabel.text = "Nice!"
+            wordLabel.text = "\(arc4random_uniform(6) + 1 )"
         }
     }
     
