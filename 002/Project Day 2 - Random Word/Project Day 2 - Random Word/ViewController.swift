@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         // https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/AttributedStrings/AttributedStrings.html
         
         
-        let attributes = [NSStrokeWidthAttributeName: 8.0,
+        let attributes = [NSStrokeWidthAttributeName: 5.0,
                           NSStrokeColorAttributeName: UIColor.white,
                           NSForegroundColorAttributeName: UIColor.clear] as [String : Any]
         
@@ -34,6 +34,20 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
+    
+    
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            wordLabel.text = "Nice!"
+        }
+    }
+    
+    
 
 
 }
