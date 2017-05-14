@@ -1,0 +1,86 @@
+body {
+  text-align: center;
+
+  font-family: 'Lato', sans-serif;
+}
+
+
+#goals-list-title{
+  font-weight: 300;
+  font-family: Lato-Light;
+  font-size: 5rem;
+}
+#goal-txt{
+  padding: 20px;
+  margin: 10px 20px;
+  border: none;
+  border-bottom: 1px solid grey;
+  width: 50%;
+}
+
+#goals-list{
+  margin: auto;
+  max-width: 70%;
+}
+
+input:focus, input:focus{
+      outline: none;
+}
+
+input[type="text"]
+{
+    font-size:6rem;
+    font-weight: 300;
+    font-family: Lato-Light;
+}
+
+
+
+#reset-goals{
+  display: block;
+  border: 1px solid grey;
+  max-width: 161px;
+  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+#reset-goals:hover{
+  background: black;
+  color: white;
+}
+
+
+.goal-entry{
+    background: #f7f7f7;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: 200;
+    font-family: Lato-Light;
+}
+
+
+
+
+#add-goal-btn{
+  border: 1px solid grey;
+  max-width: 161px;
+  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 100;
+  font-family: Lato-Light;
+  font-size: 3.5rem;
+
+}
+#add-goal-btn:hover{
+  background: black;
+  color: white;
+}
