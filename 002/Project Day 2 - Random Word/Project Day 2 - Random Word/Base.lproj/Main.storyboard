@@ -22,21 +22,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2CU-zL-lBw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ground" translatesAutoresizingMaskIntoConstraints="NO" id="2CU-zL-lBw">
                                 <rect key="frame" x="16" y="20" width="343" height="647"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8n6-vP-5Fl">
+                                <rect key="frame" x="31" y="308" width="313" height="52"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="43"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt; SHAKE &gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOJ-cb-duj" userLabel="shake">
+                                <rect key="frame" x="31" y="534" width="313" height="53"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="44"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="8n6-vP-5Fl" secondAttribute="trailing" constant="15" id="1dy-nG-zu4"/>
                             <constraint firstItem="2CU-zL-lBw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="B4S-Lb-Xrc"/>
+                            <constraint firstItem="XOJ-cb-duj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="FLP-ly-1Oh"/>
+                            <constraint firstItem="8n6-vP-5Fl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Lem-55-7Yn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="XOJ-cb-duj" secondAttribute="bottom" constant="15" id="etq-Hj-fJv"/>
                             <constraint firstItem="2CU-zL-lBw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hKk-NV-4EK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2CU-zL-lBw" secondAttribute="trailing" id="hWf-Pz-UwN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XOJ-cb-duj" secondAttribute="trailing" constant="15" id="kJC-Sf-d3V"/>
+                            <constraint firstItem="8n6-vP-5Fl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="rNP-ZT-MJe"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2CU-zL-lBw" secondAttribute="bottom" id="thv-Uo-IOG"/>
+                            <constraint firstItem="XOJ-cb-duj" firstAttribute="top" secondItem="8n6-vP-5Fl" secondAttribute="bottom" constant="174" id="vhb-vh-urH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="shakeLabel" destination="XOJ-cb-duj" id="Ylt-9P-DJm"/>
+                        <outlet property="wordLabel" destination="8n6-vP-5Fl" id="IST-r8-Jyn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="ground" width="4032" height="3024"/>
+    </resources>
 </document>
