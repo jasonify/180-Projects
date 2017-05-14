@@ -35,7 +35,6 @@ input[type="text"]
 }
 
 
-
 #reset-goals{
   display: block;
   border: 1px solid grey;
@@ -62,9 +61,6 @@ input[type="text"]
     font-weight: 200;
     font-family: Lato-Light;
 }
-
-
-
 
 #add-goal-btn{
   border: 1px solid grey;

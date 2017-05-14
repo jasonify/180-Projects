@@ -20,6 +20,9 @@ I wan to push myself to learn new things and combine art + code + design + engin
 
 I need to keep in mind that I need to make mistakes and that some projects will be really really bad. 
 
+* Should be done within the spirit of "from start to finish" in one day. So mostly original from day to day (can reuse some assets though, libs, characters, etc). Can be inspired by old ideas / sketches / work.
+* Should be fully focused, and limit the "tuorial watching" to more actual doing an experimenting by trial and error.
+* Great artists steal.
 
 
 
