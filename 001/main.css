@@ -85,6 +85,8 @@ input[type="text"]
   max-width: 23%;
   position: fixed;
   bottom: 0px;
+  cursor: pointer;
   left: 0px;
+  display: none;
 
 }

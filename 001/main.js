@@ -34,6 +34,7 @@ $(document).ready(function(){
   var $goalText = $("#goal-txt");
   var $goalList = $("#goals-list");
   var $restGoalsButton = $("#reset-goals");
+  var $heyDude = $("#heydude");
 
   var generateGoalItem = function(goal) {
     var $goalEl = $("<div class='goal-entry'></div>");
@@ -56,6 +57,7 @@ $(document).ready(function(){
     $goalText.val('');
     console.log(newGoalText);
     if(newGoalText.length > 0 ) {
+      $heyDude.slideDown();
       DataStore.addGoal(newGoalText);
       rerender();
     }
@@ -76,6 +78,11 @@ $(document).ready(function(){
   $addGoalButton.click(function(){
     presseedAddGoal();
   });
+
+  $heyDude.click(function(){
+    $heyDude.slideUp();
+  });
+
 });
 
 
