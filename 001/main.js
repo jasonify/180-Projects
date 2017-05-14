@@ -8,19 +8,22 @@ var DataStore  = {
       DataStore.resetGoals();
       return []
     } else {
-      return goals;
+      return JSON.parse(goals);
     }
   },
+
   resetGoals: function(){
     DataStore.setGoals([]);
   },
 
   setGoals: function(goals){
-    localStorage.setItem(DataStore.goalsKey, goals);
+    localStorage.setItem(DataStore.goalsKey, JSON.stringify(goals));
   },
 
   addGoal: function(newGoal){
     var currentGoals = DataStore.getGoals();
+    currentGoals.push(newGoal);
+    DataStore.setGoals(currentGoals);
   }
 };
 
