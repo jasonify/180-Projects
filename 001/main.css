@@ -80,3 +80,11 @@ input[type="text"]
   background: black;
   color: white;
 }
+
+#heydude{
+  max-width: 23%;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+
+}
