@@ -3,6 +3,8 @@
 $(document).ready(function(){
   $colorpicker = $("#colorpicker");
   $rslider = $("#rslider");
+  $gslider = $("#gslider");
+  $bslider = $("#bslider");
 
   // Our RGB values:
   var r = 200;
@@ -17,10 +19,23 @@ $(document).ready(function(){
   };
 
 
-  setRGBs();
   $rslider.on('input change', function(){
     r = $rslider.val();
     setRGBs();
   });
+
+  $gslider.on('input change', function(){
+    g = $gslider.val();
+    setRGBs();
+  });
+
+
+  $bslider.on('input change', function(){
+    b = $bslider.val();
+    setRGBs();
+  });
+
+
+  setRGBs();
 
 });
