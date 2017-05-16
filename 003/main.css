@@ -19,6 +19,8 @@ body{
 .value-field{
   min-width: 20px;
   padding: 0 5px;
+  position: relative;
+  top: -5px;
 }
 
 #colorpicker{
@@ -32,6 +34,9 @@ body{
 
 
 
+.slider{
+  opacity: 0.2;
+}
 input[type=range].slider {
   -webkit-appearance: none;
   margin: 0.7px 0;
