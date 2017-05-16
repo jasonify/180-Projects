@@ -1,9 +1,12 @@
 body{
   margin: 0;
   padding: 0;
-  /*background: #505764;*/
+  /*background: #505764;
   background: #c8d8f7;
+  */
   text-align: center;
+
+  font-family: 'Lato-Light', sans-serif;
 }
 
 
