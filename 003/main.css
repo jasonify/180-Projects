@@ -1,0 +1,13 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: #505764;
+  text-align: center;
+}
+
+
+.desk {
+  margin: auto;
+  width: 90%;
+  max-width: 2560px;
+}
