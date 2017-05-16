@@ -23,6 +23,9 @@ body{
 
 #colorpicker{
   margin-bottom: 20px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
 }
 
 /* "BORROWED */
