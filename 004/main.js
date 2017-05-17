@@ -9,7 +9,7 @@ window.onload = function(){
   var particles = [];
   for(var ii = 0; ii < 20; ii++){
     particles.push( vector.create(0, 0));
-    var v1 =  vector.create(Math.random() - 0.5, Math.random() - 0.5);
+    var v1 =  vector.create(Math.random() - 0.5, Math.random()  - 0.5);
     particlesVelocity.push(v1);
   }
 
