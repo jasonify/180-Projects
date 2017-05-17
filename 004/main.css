@@ -5,4 +5,16 @@ html, body {
 
 canvas {
   display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+#img{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -25%;
+  width: 50%;
 }

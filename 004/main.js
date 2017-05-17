@@ -23,6 +23,8 @@ window.onload = function(){
       particle.addTo(vel);
 
 
+      context.fillStyle = "#fcec59";
+      context.strokeStyle = "#fcec59";
       context.beginPath();
       context.arc(particle.getX(),particle.getY(),50,0,2*Math.PI);
       context.stroke();
