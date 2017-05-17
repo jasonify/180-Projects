@@ -8,10 +8,9 @@ window.onload = function(){
   var particlesVelocity = [];
   var particles = [];
   for(var ii = 0; ii < 20; ii++){
+    particles.push( vector.create(0, 0));
     var v1 =  vector.create(Math.random() - 0.5, Math.random() - 0.5);
-    particles.push( v1.create(0, 0));
-
-    particlesVelocity.push();
+    particlesVelocity.push(v1);
   }
 
   var render = function(){
@@ -27,6 +26,7 @@ window.onload = function(){
       context.beginPath();
       context.arc(particle.getX(),particle.getY(),50,0,2*Math.PI);
       context.stroke();
+      // Reseet
     }
 
     context.restore();
