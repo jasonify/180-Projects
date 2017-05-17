@@ -92,6 +92,22 @@ var vector =  {
     this._y = Math.sin(angle) * length;
   },
 
+  add: function(_vector){
+    return this.create(_vector.getX() + this._x, _vector.getY() + this._y);
+  },
+
+  addTo: function(v){
+    this.setXY(this._x + v.getX(), this._y + v.getY());
+  },
+
+  multiply: function(_vector){
+    return this.create(_vector.getX() * this._x, _vector.getY() * this._y);
+  },
+
+  multiplyTo: function(_vector){
+    this.setXY(this._x * _vector.getX(), this._y * _vector.getY());
+  },
+
   getAngleTo: function(x, y){
     var dx =  this._x - x ;
     var dy =  this._y  - y ;
