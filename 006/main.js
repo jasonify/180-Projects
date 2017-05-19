@@ -29,8 +29,9 @@ window.onload = function(){
       // console.log('x', x, 'y', y);
 
       context.beginPath();
-      context.arc(x,y, 20, 0, Math.PI * 2);
+      context.arc(x,y, 10, 0, Math.PI * 2);
       context.stroke();
+      context.fill();
       context.restore();
       requestAnimationFrame(render, 1000/60);
     }
