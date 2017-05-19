@@ -18,6 +18,8 @@ window.onload = function(){
   });
 
   var render = function(){
+      context.restore();
+      context.clearRect(0, 0, width, height);
       context.save();
       context.translate(width/2, height/2);
       var x = Math.cos(angle) * radius;
