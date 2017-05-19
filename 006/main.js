@@ -4,7 +4,9 @@ window.onload = function(){
   var height = canvas.height = window.innerHeight;
   var context = canvas.getContext('2d');
   var angle = 0;
+  var angley = 0;
   var speed = 0.1;
+  var speedy = 0.01;
   var radius = 100;
 
   var restart = function(){
@@ -19,8 +21,9 @@ window.onload = function(){
       context.save();
       context.translate(width/2, height/2);
       var x = Math.cos(angle) * radius;
-      var y = Math.sin(angle) * radius;
+      var y = Math.sin(angley) * radius;
       angle += speed;
+      angley += speedy;
       // console.log('x', x, 'y', y);
 
       context.beginPath();
