@@ -2,7 +2,7 @@ var width;
 var height;
 var bees = [];
 var points = 0;
-var beesCount = 4;
+var beesCount = 5;
 
 // Example bee:
 var sampleBee = {
@@ -25,8 +25,8 @@ function preload(){
       xAngle: 0,
       yAngle: 0,
       width: 10,
-      xSpeed: random(-10, 10) / 10 ,
-      ySpeed:  random(-5, 5) * 3 ,
+      xSpeed: random(-10, 10) / 100 ,
+      ySpeed:  random(-5, 5) / 100 ,
       isQueen: false,
       radius: random(80, 100)
     };
@@ -54,7 +54,7 @@ function drawBees(){
     bee.xAngle += bee.xSpeed
     bee.yAngle += bee.ySpeed;
     bee.x = Math.cos(bee.xAngle) * bee.radius;
-    bee.y = Math.sin(bee.xAngle) * bee.radius;
+    bee.y = Math.sin(bee.yAngle) * bee.radius;
     drawBee(bee);
   }
 }
@@ -77,5 +77,5 @@ function draw(){
   // Draw bees:
   drawBees();
   translate(-width/2, -height/2);
-  ellipse(mouseX, mouseY, 80, 80);
+  ellipse(mouseX, mouseY, 20, 20);
 }
