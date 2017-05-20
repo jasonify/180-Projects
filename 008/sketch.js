@@ -38,17 +38,26 @@ function setup(){
   createCanvas(width, height);
 }
 
+function drawBees(){
+
+}
 function draw(){
   clear();
   fill(0); // set to black 
   text("Poinst: " + points, 10, 10);
-  ellipse(200, 200, 100);
 
   if (mouseIsPressed){
     fill(0);
   } else {
     fill(255);
   }
+  var hit = collideCircleCircle(mouseX,mouseY,150,width/2 + 200, height/2 + 200,100)
+
+  console.log('hit?', hit);
+  translate(width/2, height/2);
+  ellipse(200, 200, 100);
+
+  // Draw bees:
+  translate(-width/2, -height/2);
   ellipse(mouseX, mouseY, 80, 80);
-  var hit = collideCircleCircle(mouseX,mouseY,150,200,200,100)
 }
