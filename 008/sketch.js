@@ -2,7 +2,7 @@ var width;
 var height;
 var bees = [];
 var points = 0;
-var beesCount = 0;
+var beesCount = 4;
 
 // Example bee:
 var sampleBee = {
@@ -16,7 +16,7 @@ var sampleBee = {
 };
 
 function preload(){
-  for(var ii = 0; beesCount; ii++){
+  for(var ii = 0; ii < beesCount; ii++){
     var bee = {
       x: 0,
       y: 0,
@@ -26,16 +26,15 @@ function preload(){
       isQueen: false,
       radius: 100
     };
+    bees.push(bee);
   }
   bees[bees.length -1 ].isQueen = true;
-  print(bees):
+  print(bees);
 }
 
 function setup(){
   width = window.innerWidth;
   height = window.innerHeight;
-  console.log(width);
-  console.log(height);
   createCanvas(width, height);
 }
 
@@ -52,5 +51,4 @@ function draw(){
   }
   ellipse(mouseX, mouseY, 80, 80);
   var hit = collideCircleCircle(mouseX,mouseY,150,200,200,100)
-	print("colliding? " + hit);
 }
