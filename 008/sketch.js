@@ -89,6 +89,7 @@ function draw(){
     fill(0); // set to black 
   }
   text("Poinst: " + points, 10, 10);
+  text("Press mouse when most bees are overlapping: "  , 10, 30);
 
   if (mouseIsPressed){
     fill(0);
@@ -109,5 +110,5 @@ function draw(){
   // Draw bees:
   drawBees();
   translate(-width/2, -height/2);
-  ellipse(mouseX, mouseY, 20, 20);
+  // ellipse(mouseX, mouseY, 20, 20);
 }
