@@ -8,6 +8,8 @@ var beesCount = 4;
 var sampleBee = {
   x: 0,
   y: 0,
+  xAngle: 0,
+  yAngle: 0,
   width: 10,
   xSpeed: 0.1,
   ySpeed:  0.5,
@@ -20,11 +22,13 @@ function preload(){
     var bee = {
       x: 0,
       y: 0,
+      xAngle: 0,
+      yAngle: 0,
       width: 10,
       xSpeed: random(-10, 10) / 10 ,
       ySpeed:  random(-5, 5) * 3 ,
       isQueen: false,
-      radius: 100
+      radius: random(80, 100)
     };
     bees.push(bee);
   }
@@ -38,9 +42,23 @@ function setup(){
   createCanvas(width, height);
 }
 
+
+function drawBee(bee){
+  ellipse(bee.x, bee.y, bee.width, bee.width);
+}
 function drawBees(){
 
+  for(var ii = 0; ii < bees.length; ii++){
+    // Update bees:
+    var bee = bees[ii];
+    bee.xAngle += bee.xSpeed
+    bee.yAngle += bee.ySpeed;
+    bee.x = Math.cos(bee.xAngle) * bee.radius;
+    bee.y = Math.sin(bee.xAngle) * bee.radius;
+    drawBee(bee);
+  }
 }
+
 function draw(){
   clear();
   fill(0); // set to black 
@@ -51,13 +69,13 @@ function draw(){
   } else {
     fill(255);
   }
-  var hit = collideCircleCircle(mouseX,mouseY,150,width/2 + 200, height/2 + 200,100)
+  // var hit = collideCircleCircle(mouseX,mouseY,150,width/2 + 200, height/2 + 200,100)
 
-  console.log('hit?', hit);
+  // console.log('hit?', hit);
   translate(width/2, height/2);
-  ellipse(200, 200, 100);
 
   // Draw bees:
+  drawBees();
   translate(-width/2, -height/2);
   ellipse(mouseX, mouseY, 80, 80);
 }
