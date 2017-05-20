@@ -80,14 +80,26 @@ function drawBees(){
   }
 }
 
+var hitFailed = false;
 function draw(){
   clear();
-  fill(0); // set to black 
+  if(hitFailed){
+    fill(255,0,0); // set to black 
+  } else {
+    fill(0); // set to black 
+  }
   text("Poinst: " + points, 10, 10);
 
   if (mouseIsPressed){
     fill(0);
-    checkOverlappingBees();
+    var hits = checkOverlappingBees();
+    if(hits === 0) {
+      points = 0;
+      hitFailed = true;
+    } else {
+      hitFailed = false;
+      points+=hits;
+    }
   } else {
     fill(255);
   }
