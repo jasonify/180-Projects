@@ -5,17 +5,19 @@ var points = 0;
 var beesCount = 5;
 
 // Example bee:
+/*
 var sampleBee = {
   x: 0,
   y: 0,
   xAngle: 0,
   yAngle: 0,
-  width: 10,
+  width: 30,
   xSpeed: 0.1,
   ySpeed:  0.5,
   isQueen: false,
   radius: 100
 };
+*/
 
 function preload(){
   for(var ii = 0; ii < beesCount; ii++){
@@ -24,11 +26,11 @@ function preload(){
       y: 0,
       xAngle: 0,
       yAngle: 0,
-      width: 10,
+      width: 30,
       xSpeed: random(-10, 10) / 100 ,
       ySpeed:  random(-5, 5) / 100 ,
       isQueen: false,
-      radius: random(80, 100)
+      radius: 150 
     };
     bees.push(bee);
   }
@@ -45,6 +47,25 @@ function setup(){
 
 function drawBee(bee){
   ellipse(bee.x, bee.y, bee.width, bee.width);
+}
+
+
+function checkOverlappingBees(){
+
+  var hits = 0;
+  for(var ii = 0; ii < bees.length-1; ii++){
+    var bee = bees[ii];
+    for(var ll  = ii+1; ll < bees.length; ll++){
+      var bee2 = bees[ll];
+      var hit = collideCircleCircle(bee.x,bee.y,bee.width,bee2.x, bee2.y,bee2.width);
+      //console.log(hit);
+      var count = hit == true? 1:0;
+      // print(count);
+      hits +=  count; 
+    }
+  }
+  print("hits " + hits);
+  return hits;
 }
 function drawBees(){
 
@@ -66,12 +87,11 @@ function draw(){
 
   if (mouseIsPressed){
     fill(0);
+    checkOverlappingBees();
   } else {
     fill(255);
   }
-  // var hit = collideCircleCircle(mouseX,mouseY,150,width/2 + 200, height/2 + 200,100)
 
-  // console.log('hit?', hit);
   translate(width/2, height/2);
 
   // Draw bees:
