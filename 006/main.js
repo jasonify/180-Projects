@@ -7,7 +7,8 @@ window.onload = function(){
   var angley = 0;
   var speed = 0.1;
   var speedy = 0.01;
-  var radius = 100;
+  var radius = 200;
+  var radiusy = 100;
 
   var restart = function(){
     console.log('mousedown');
@@ -23,7 +24,7 @@ window.onload = function(){
       context.save();
       context.translate(width/2, height/2);
       var x = Math.cos(angle) * radius;
-      var y = Math.sin(angley) * radius;
+      var y = Math.sin(angley) * radiusy;
       angle += speed;
       angley += speedy;
       // console.log('x', x, 'y', y);
