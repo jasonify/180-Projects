@@ -23,13 +23,15 @@ function loaded(){
   // Params to rotate in a circle;
   var drawShip = function(){
     context.beginPath();
-    context.moveTo(15,0);
     // Draw top part of ship
+    context.moveTo(35,0);
     context.lineTo(-15, -20);
     context.stroke();
-    context.moveTo(15,0);
+    // Draw bottom part of ship
+    context.moveTo(35,0);
     context.lineTo(-15, 20);
     context.stroke();
+    // Draw back of ship
     context.moveTo(-15,-20);
     context.lineTo(-15,20);
     context.stroke();
