@@ -14,9 +14,9 @@ function loaded(){
   var getRotationPositionToCenter = function(x,y){
     var centerX = width/2;
     var centerY = height/2;
-    var dx = centerX - x;
-    var dy = centerY - y ;
-    var angle = Math.atan2(dx, dy);
+    var dx = x - centerX ;
+    var dy = y - centerY;
+    var angle = Math.atan2(dy, dx);
     return angle;
   }
 
@@ -41,7 +41,7 @@ function loaded(){
     context.save();
     context.clearRect(0, 0, width, height);
     context.translate(width/2, height/2);
-    // context.rotate(getRotationPositionToCenter(mouseX, mouseY));
+    context.rotate(getRotationPositionToCenter(mouseX, mouseY));
     drawShip();
 
 
