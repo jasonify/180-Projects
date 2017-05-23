@@ -30,7 +30,7 @@ function preload(){
       xSpeed: random(-10, 10) / 100 ,
       ySpeed:  random(-5, 5) / 100 ,
       isQueen: false,
-      radius: 150 
+      radius: 150
     };
     bees.push(bee);
   }
@@ -61,7 +61,7 @@ function checkOverlappingBees(){
       //console.log(hit);
       var count = hit == true? 1:0;
       // print(count);
-      hits +=  count; 
+      hits +=  count;
     }
   }
   print("hits " + hits);
@@ -84,12 +84,12 @@ var hitFailed = false;
 function draw(){
   clear();
   if(hitFailed){
-    fill(255,0,0); // set to black 
+    fill(255,0,0); // set to black
   } else {
-    fill(0); // set to black 
+    fill(0); // set to black
   }
-  text("Poinst: " + points, 10, 10);
-  text("Press mouse when most bees are overlapping: "  , 10, 30);
+  text("Poinst: " + points, 10, 30);
+  text("Press mouse when most bees are overlapping: "  , 10, 60);
 
   if (mouseIsPressed){
     fill(0);
